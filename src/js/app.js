@@ -10,16 +10,16 @@ import "../style/index.css";
         avatarURL: "https://randomuser.me/api/portraits/women/42.jpg", // this is the url for the profile avatar
         socialMediaPosition: "left", // social media bar position (left or right)
         
-        twitter: null, // social media usernames
-        github: null,
-        linkedin: null,
-        instagram: null,
+        twitter: @Lolsters_, // social media usernames
+        github: "Lconforme"
+        linkedin: "Lorelys Conforme"
+        instagram: "@Lolsters_"
 
-        name: null,
-        lastname: null,
-        role: null,
-        country: null,
-        city: null
+        name: Lorelys,
+        lastname: Conforme,
+        role: Web Developer,
+        country: USA,
+        city: Miami
     }
  */
 function render(variables = {}) {
@@ -33,14 +33,14 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
+          <h1>Lorelys Conforme</h1>
           <h2>Web Developer</h2>
           <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/4geeksacademy"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/4geeksacademy"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/4geeksacademy"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/4geeksacademy"><i class="fab fa-instagram"></i></a></li>
+          <ul class="position-left">
+            <li><a href="https://twitter.com/lolsters_"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://github.com/lconforme"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/lorelys-conforme-498992250/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/lolsters__/"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
@@ -61,7 +61,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezr",
+    github: "alesanchezrf",
     linkedin: null,
     instagram: null,
     name: null,
