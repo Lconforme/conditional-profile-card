@@ -10,16 +10,15 @@ import "../style/index.css";
         avatarURL: "https://randomuser.me/api/portraits/women/42.jpg", // this is the url for the profile avatar
         socialMediaPosition: "left", // social media bar position (left or right)
         
-        twitter: @Lolsters_, // social media usernames
-        github: "Lconforme"
-        linkedin: "Lorelys Conforme"
-        instagram: "@Lolsters_"
-
-        name: Lorelys,
-        lastname: Conforme,
-        role: Web Developer,
-        country: USA,
-        city: Miami
+        twitter: null// social media usernames
+        github: "null",
+        linkedin: null,
+        instagram: null,
+        name: null,
+        lastname: null,
+        role: null,
+        country: null,
+        city: null
     }
  */
 function render(variables = {}) {
@@ -33,16 +32,30 @@ function render(variables = {}) {
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lorelys Conforme</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-left">
-            <li><a href="https://twitter.com/lolsters_"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://github.com/lconforme"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/lorelys-conforme-498992250/"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/lolsters__/"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-        </div>
+          <h1>${variables.name == null ? "" : variables.name} ${
+    variables.lastname == null ? "" : variables.lastname
+  }</h1>
+          <h2>${variables.role == null ? "" : variables.role}</h2>
+          <h3>${variables.city == null ? "" : variables.city} 
+          ${variables.country == null ? "" : variables.country}</h3>
+
+          <ul class="${variables.socialMediaPosition}">
+          
+          <li><a href="https://twitter.com/${
+            variables.twitter
+          }"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="https://github.com/${
+            variables.github
+          }"><i class="fa fa-github"></i></a></li>
+          <li><a href="https://linkedin.com/${
+            variables.linkedin
+          }"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://instagram.com/${
+            variables.instagram
+          }"><i class="fa fa-instagram"></i></a></li>
+
+        </ul>
+      </div>
     `;
 }
 
@@ -61,7 +74,7 @@ window.onload = function() {
     socialMediaPosition: "position-left",
     // social media usernames
     twitter: null,
-    github: "alesanchezrf",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
